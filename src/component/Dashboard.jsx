@@ -1,8 +1,8 @@
 import React from 'react'
 // import{useState} from 'react'
 import Slots from './Slots'
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
+// import Table from 'react-bootstrap/Table';
+// import Button from 'react-bootstrap/Button';
 
 function Dashboard(user, setuser) {
     let slot=[
@@ -57,7 +57,7 @@ function Dashboard(user, setuser) {
             <h1 className="h3 mb-0 text-gray-800"><i>User List</i></h1>
         </div>  
                   {/* User Table  */}
-        <div className="row">
+        {/* <div className="row">
             <div className="container-fluid">
             <Table striped bordered hover>
                 <thead>
@@ -96,7 +96,7 @@ function Dashboard(user, setuser) {
                 </tbody>
             </Table> 
             </div>
-        </div>
+        </div> */}
   </>
 }
 
