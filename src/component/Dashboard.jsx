@@ -1,10 +1,9 @@
 import React from 'react'
-// import{useState} from 'react'
 import Slots from './Slots'
-// import Table from 'react-bootstrap/Table';
-// import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 
-function Dashboard(user, setuser) {
+function Dashboard({user, setuser}) {
     let slot=[
         { isProgress: false,
           title:"Earnings (Monthly)",
@@ -57,46 +56,50 @@ function Dashboard(user, setuser) {
             <h1 className="h3 mb-0 text-gray-800"><i>User List</i></h1>
         </div>  
                   {/* User Table  */}
-        {/* <div className="row">
-            <div className="container-fluid">
+        <div className="row">
+          <div className="container-fluid">
             <Table striped bordered hover>
-                <thead>
+              <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>DoB</th>
-                    <th>id</th>
-                    <th>eMail</th>
-                    <th>Mobile</th>                      
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>DoB</th>
+                  <th>User Id</th>
+                  <th>eMail</th>
+                  <th>Mobile</th>
+                  <th>  </th>
                 </tr>
-                </thead>
-                <tbody>
-                {
-                    user.map((e,i)=>{
+              </thead>
+              <tbody>
+              
+              {
+                  user.map((e,i)=>{
                     return <tr key={i}>
-                        <td>{i+1}</td>
-                        <td>{e.Name}</td>
-                        <td>{e.DoB}</td>
-                        <td>{e.id}</td>
-                        <td>{e.eMail}</td>
-                        <td>{e.Mobile}</td>
-                        <td>
+                      <td>{i+1}</td>
+                      <td>{e.Name}</td>
+                      <td>{e.DoB}</td>
+                      <td>{e.Id}</td>
+                      <td>{e.eMail}</td>
+                      <td>{e.Mobile}</td>
+                      <td>
                         <Button variant="light"> EDIT </Button>
                         &nbsp;
                         &nbsp; 
                         <Button variant="danger" onClick={()=>{
-                            handledelet(i)
+                          handledelet(i)
                         }}> DELET </Button>
 
-                        </td>
+                      </td>
+
 
                     </tr>
-                    })
+                  })
+                  
                 }
-                </tbody>
-            </Table> 
-            </div>
-        </div> */}
+              </tbody>
+            </Table>
+          </div>
+        </div>
   </>
 }
 

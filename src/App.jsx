@@ -10,6 +10,7 @@ function App() {
   let[user, setuser]=useState([
     {
       Name:"Raju",
+      DoB:"10/01/1998", 
       Id:"@001",
       eMail:"raju@gmail.com",
       Mobile:"9847372546",
@@ -17,6 +18,7 @@ function App() {
     },
     {
       Name:"Ragavi",
+      DoB:"10/01/1998",
       Id:"@002",
       eMail:"ragav@gmail.com",
       Mobile:"7374936003",
@@ -24,6 +26,7 @@ function App() {
     },
     {
       Name:"Kim",
+      DoB:"10/01/1998", 
       Id:"@003",
       eMail:"kim@gmail.com",
       Mobile:"7322136003",
@@ -35,24 +38,22 @@ function App() {
   return <>
     <BrowserRouter>
         <div id="wrapper">
-        <SideBar/>
+          <SideBar/>
 
-        <div id="content-wrapper" className="d-flex flex-column">
-            {/* Main Content */}
-          <div id="content">
-            <div className="container-fluid">
+          <div id="content-wrapper" className="d-flex flex-column">
+              {/* Main Content */}
+            <div id="content">
+              <div className="container-fluid">
 
-              <Routes>
-                <Route path='/Dashboard' element={ <Dashboard user={user} setuser={setuser}/> }/>
-                <Route path='/AddUser' element={ <AddUser/> } />
-                <Route path='*' element={ <Navigate to='/Dashboard'/>} />
-              </Routes>
-                
-            </div> 
-          </div>
-        </div>  
-        {/* </Routes> */}
-        
+                <Routes>
+                  <Route path='/Dashboard' element={ <Dashboard user={user} setuser={setuser}/> }/>
+                  <Route path='/AddUser' element={ <AddUser/> } />
+                  <Route path='*' element={ <Navigate to='/Dashboard'/>} />
+                </Routes>
+                  
+              </div> 
+            </div>
+          </div>     
 
         </div>
     </BrowserRouter>

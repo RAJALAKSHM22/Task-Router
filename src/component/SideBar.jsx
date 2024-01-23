@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 function SideBar() {
 
   return <>
@@ -17,15 +17,19 @@ function SideBar() {
         <hr className="sidebar-divider my-0"/>
 
         {/* <!-- Nav Item - Dashboard --> */}
+        <link to={"/Dashboard"} >
         <li className="nav-item active">
-            <a className="nav-link" href="index.html">
+            
+            <div className="nav-link" >
                 <i className="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>Dashboard</span></div>
+           
         </li>
+        </link>
         <li className="nav-item active">
-            <a className="nav-link" href="index.html">
+            <div className="nav-link" href="index.html">
                 <i className="fas fa-fw fa-tachometer-alt"></i>
-                <span>Add User</span></a>
+                <span>Add User</span></div>
         </li>
 
         {/* <!-- Divider --> */}
